@@ -5,6 +5,8 @@
  */
 package my.example;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author rkusch
@@ -13,7 +15,8 @@ public class GuiOutputSubscriber implements MathProblemSubscriber {
 
     @Override
     public void processEvent(String problem, double answer) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        JOptionPane.showMessageDialog(null, "The answer the the problem is" + problem + ": is " + answer);
     }
     
 }
